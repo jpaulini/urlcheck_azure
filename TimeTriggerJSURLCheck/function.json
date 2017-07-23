@@ -1,0 +1,26 @@
+{
+  "bindings": [
+    {
+      "name": "myTimer",
+      "type": "timerTrigger",
+      "direction": "in",
+      "schedule": "0 */1 * * * *"
+    },
+    {
+      "type": "table",
+      "name": "inputTableURLs",
+      "tableName": "urls",
+      "take": 50,
+      "connection": "checkurlstorage_STORAGE",
+      "direction": "in"
+    },
+    {
+      "type": "table",
+      "name": "outputTableLog",
+      "tableName": "outTableLog",
+      "connection": "checkurlstorage_STORAGE",
+      "direction": "out"
+    }
+  ],
+  "disabled": false
+}
